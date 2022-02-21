@@ -1,0 +1,320 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .banner {
+  width: 100%;
+  height: 3.3867rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container .main {
+  width: 100%;
+  height: calc(100% - 127px);
+  padding-top: 0.2rem;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .main .main-left {
+  flex: none;
+  width: 2rem;
+  padding-right: 0.2rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-left .tab {
+  width: 100%;
+}
+
+.container .main .main-left .tab .tab-item {
+  width: 100%;
+  height: 1rem;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  line-height: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #fff;
+  font-size: 0.36rem;
+  color: #818181;
+}
+
+.container .main .main-left .tab .active {
+  background: #2eb807;
+  font-size: 0.48rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.container .main .main-left .tab .tab-item:not(:first-child) {
+  margin-top: 0.4rem;
+}
+
+.container .main .main-right {
+  width: 100%;
+  height: 100%;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .main .main-right .card .card-title {
+  display: flex;
+  justify-content: center;
+  height: 0.64rem;
+  font-size: 0.48rem;
+  line-height: 0.64rem;
+}
+
+.container .main .main-right .card .card-title span {
+  position: relative;
+}
+
+.container .main .main-right .card .card-title span::before,
+.container .main .main-right .card .card-title span::after {
+  content: "";
+  background-image: url(../imgs/icon.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  width: 0.64rem;
+  height: 0.64rem;
+}
+
+.container .main .main-right .card .card-title span::before {
+  left: -0.82rem;
+}
+
+.container .main .main-right .card .card-title span::after {
+  right: -0.82rem;
+}
+
+.container .main .main-right .card .card-content {
+  width: 100%;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card .card-content span {
+  display: block;
+  width: 100%;
+  line-height: 0.5rem;
+  text-align: left;
+  color: #818181;
+}
+
+.container .main .main-right .card .card-content span:nth-child(1) {
+  font-weight: 700;
+  color: #000;
+}
+
+.container .main .main-right .card:not(:first-child) {
+  margin-top: 0.6rem;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .time-range {
+  width: 100%;
+  display: flex;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-start,
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-end {
+  width: 1.8rem;
+  height: 1.6rem;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 0.2667rem;
+  background: #ececec;
+  font-size: 0.3733rem;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-start span,
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-end span {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-start span:nth-child(1),
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-end span:nth-child(1) {
+  font-size: 0.4533rem;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .time-range .time-range-separator {
+  display: block;
+  width: 0.4rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: 0.48rem;
+  margin: 0 0.1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .enter-explain {
+  width: 100%;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .visit-hotline {
+  width: 100%;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .visit-hotline span {
+  display: inline;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .visit-hotline .hotline-detail {
+  width: 100%;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .visit-hotline .hotline-detail .hotline-detail-item {
+  display: block;
+  color: #24d900;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.36rem;
+  position: relative;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(1) .card-content .visit-hotline .hotline-detail .hotline-detail-item::before {
+  content: "";
+  background-image: url(../imgs/phone.png);
+  background-repeat: no-repeat;
+  background-size: 0.48rem 0.48rem;
+  background-color: #e3ffdb;
+  background-position: center center;
+  width: 0.64rem;
+  height: 0.64rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.0133rem solid #24d900;
+  left: 0;
+  top: 50%;
+  margin-top: -0.32rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(2) {
+  padding: unset;
+  padding-top: 0.5rem;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-address {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  box-sizing: border-box;
+  background: #e3ffdb;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-address span {
+  display: inline;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-address .manor-address-info {
+  color: #24d900;
+  font-size: 0.44rem;
+  font-weight: 700;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-line {
+  width: calc(100% - 0.5rem);
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-line span:nth-child(1) {
+  font-size: 0.36rem;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-line li {
+  list-style-type: disc;
+}
+
+.container .main .main-right .card:nth-child(2) .card-content .manor-line li:not(:first-child) {
+  padding-top: 0.5rem;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item {
+  width: 100%;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item span:nth-child(1) {
+  font-weight: unset;
+  color: #818181;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item .card-content-item-detail {
+  width: 100%;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item .card-content-item-detail .swiper-container {
+  width: 100%;
+  height: inherit;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item .card-content-item-detail .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: inherit;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item .card-content-item-detail .entertainment .swiper-slide {
+  width: 80px !important;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item .card-content-item-detail .service .swiper-slide {
+  width: 62px !important;
+}
+
+.container .main .main-right .card:nth-child(3) .card-content .card-content-item:not(:first-child) {
+  padding-top: 0.2rem;
+}
+
+.container .main .main-right .card:nth-child(4) .card-content .attention {
+  color: #818181;
+  font-weight: unset;
+}
+
+.container .main .main-right .card:nth-child(4) .card-content .attention-detail {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  color: #818181;
+}
+
+.container .main .main-right .card:nth-child(4) .card-content .attention-detail li {
+  list-style-type: disc;
+}
+
+.container .main .main-right .card:nth-child(4) .card-content .attention-detail li:not(:first-child) {
+  padding-top: 0.5rem;
+}

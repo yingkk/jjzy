@@ -1,0 +1,281 @@
+@charset "utf-8";
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .banner {
+    width: 100%;
+    height: 3.3867rem;
+    display: flex;
+    justify-content: center;
+  }
+  .main {
+    width: 100%;
+    height: calc(100% - 127px);
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    .main-left {
+      flex: none;
+      width: 2rem;
+      padding-right: 0.2rem;
+      box-sizing: border-box;
+      .tab {
+        width: 100%;
+        .tab-item {
+          width: 100%;
+          height: 1rem;
+          padding: 0 0.4rem;
+          box-sizing: border-box;
+          line-height: 1rem;
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+          background: #fff;
+          font-size: 0.36rem;
+          color: #818181;
+        }
+        .active {
+          background: #2eb807;
+          font-size: 0.48rem;
+          color: #fff;
+          font-weight: 600;
+        }
+        .tab-item:not(:first-child) {
+          margin-top: 0.4rem;
+        }
+      }
+    }
+    .main-right {
+      width: 100%;
+      height: 100%;
+      padding-right: 0.5rem;
+      padding-bottom: 1rem;
+      overflow-y: auto;
+      box-sizing: border-box;
+      .card {
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        .card-title {
+          display: flex;
+          justify-content: center;
+          height: 0.64rem;
+          font-size: 0.48rem;
+          line-height: 0.64rem;
+          span {
+            position: relative;
+          }
+        }
+        .card-title span::before,
+        .card-title span::after {
+          content: "";
+          background-image: url(../imgs/icon.png);
+          background-repeat: no-repeat;
+          display: inline-block;
+          position: absolute;
+          width: 0.64rem;
+          height: 0.64rem;
+        }
+        .card-title span::before {
+          left: -0.82rem;
+        }
+        .card-title span::after {
+          right: -0.82rem;
+        }
+        .card-content {
+          width: 100%;
+          padding-top: 0.5rem;
+          box-sizing: border-box;
+          span {
+            display: block;
+            width: 100%;
+            line-height: 0.5rem;
+            text-align: left;
+            color: #818181;
+          }
+          span:nth-child(1) {
+            font-weight: 700;
+            color: #000;
+          }
+        }
+      }
+      .card:not(:first-child) {
+        margin-top: 0.6rem;
+      }
+      .card:nth-child(1) .card-content {
+        .time-range {
+          width: 100%;
+          display: flex;
+          .time-range-start,
+          .time-range-end {
+            width: 1.8rem;
+            height: 1.6rem;
+            padding: 0.2rem;
+            box-sizing: border-box;
+            border-radius: 0.2667rem;
+            background: #ececec;
+            font-size: 0.3733rem;
+            span {
+              height: 0.6rem;
+              line-height: 0.6rem;
+              text-align: center;
+            }
+            span:nth-child(1) {
+              font-size: 0.4533rem;
+            }
+          }
+          .time-range-separator {
+            display: block;
+            width: 0.4rem;
+            height: 1.6rem;
+            line-height: 1.6rem;
+            font-size: 0.48rem;
+            margin: 0 0.1rem;
+            text-align: center;
+            box-sizing: border-box;
+          }
+        }
+        .enter-explain {
+          width: 100%;
+          padding-top: 0.5rem;
+          box-sizing: border-box;
+        }
+        .visit-hotline {
+          width: 100%;
+          padding-top: 0.5rem;
+          box-sizing: border-box;
+          span {
+            display: inline;
+          }
+          .hotline-detail {
+            width: 100%;
+            padding-top: 0.2rem;
+            box-sizing: border-box;
+            .hotline-detail-item {
+              display: block;
+              color: #24d900;
+              width: 100%;
+              height: 1rem;
+              line-height: 1rem;
+              font-size: 0.36rem;
+              position: relative;
+              padding-left: 1rem;
+              box-sizing: border-box;
+            }
+            .hotline-detail-item::before {
+              content: "";
+              background-image: url(../imgs/phone.png);
+              background-repeat: no-repeat;
+              background-size: 0.48rem 0.48rem;
+              background-color: #e3ffdb;
+              background-position: center center;
+              width: 0.64rem;
+              height: 0.64rem;
+              position: absolute;
+              border-radius: 50%;
+              border: 0.0133rem solid #24d900;
+              left: 0;
+              top: 50%;
+              margin-top: -0.32rem;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+
+      .card:nth-child(2) {
+        padding: unset;
+        padding-top: 0.5rem;
+        .card-content {
+          .manor-address {
+            width: 100%;
+            padding: 0.2rem 0.5rem;
+            box-sizing: border-box;
+            background: #e3ffdb;
+            span {
+              display: inline;
+            }
+            .manor-address-info {
+              color: #24d900;
+              font-size: 0.44rem;
+              font-weight: 700;
+            }
+          }
+          .manor-line {
+            width: calc(100% - 0.5rem);
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+            box-sizing: border-box;
+            span:nth-child(1) {
+              font-size: 0.36rem;
+            }
+            li {
+              list-style-type: disc;
+            }
+            li:not(:first-child) {
+              padding-top: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .card:nth-child(3) .card-content {
+        .card-content-item {
+          width: 100%;
+          span:nth-child(1) {
+            font-weight: unset;
+            color: #818181;
+          }
+          .card-content-item-detail {
+            width: 100%;
+            padding-top: 0.2rem;
+            box-sizing: border-box;
+            .swiper-container {
+              width: 100%;
+              height: inherit;
+              .swiper-wrapper {
+                width: 100%;
+                height: inherit;
+              }
+            }
+            .entertainment .swiper-slide {
+              width: 80px !important;
+            }
+            .service .swiper-slide {
+              width: 62px !important;
+            }
+          }
+        }
+        .card-content-item:not(:first-child) {
+          padding-top: 0.2rem;
+        }
+      }
+
+      .card:nth-child(4) .card-content {
+        .attention {
+          color: #818181;
+          font-weight: unset;
+        }
+        .attention-detail {
+          width: 100%;
+          padding: 0.5rem;
+          box-sizing: border-box;
+          color: #818181;
+          li {
+            list-style-type: disc;
+          }
+          li:not(:first-child) {
+            padding-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

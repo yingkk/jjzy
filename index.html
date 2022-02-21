@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./sheet/common.css">
+  <link rel="stylesheet" href="./js/swiper/swiper.min.css">
+  <link rel="stylesheet" href="./js/vant/vant.min.css">
+  <link rel="stylesheet" href="./sheet/index.css">
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script src="./js/flexible.js"></script>
+  <script src="./js/clipboard.min.js"></script>
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/vant/vant.min.js"></script>
+  <script src="./js/swiper/swiper.min.js"></script>
+  <title>交通指南</title>
+</head>
+
+<body>
+  <div class="container" id="app">
+    <div class="banner">
+      <img src="./imgs/banner.png">
+    </div>
+    <div class="main">
+      <div class="main-left">
+        <div class="tab">
+          <div :class="['tab-item', activeTabIndex === index ? 'active': '']" v-for="(item, index) in tabs"
+            @click="handleTabChange(item.dom, index)">{{ item.title }}</div>
+        </div>
+      </div>
+      <div class="main-right" @scroll="handleScroll($event)">
+        <div class="card shijian">
+          <div class="card-title">
+            <span>开放时间</span>
+          </div>
+          <div class="card-content">
+            <div class="time-range">
+              <div class="time-range-start">
+                <span>08:00</span>
+                <span>早</span>
+              </div>
+              <span class="time-range-separator">~</span>
+              <div class="time-range-end">
+                <span>18:30</span>
+                <span>晚</span>
+              </div>
+            </div>
+            <div class="enter-explain">
+              <span>夏季参观高峰期，请提前入园</span>
+              <span>一年365天静候您的光临</span>
+            </div>
+            <div class="visit-hotline">
+              <span>景区咨询热线：</span>
+              <span>（点击拨打电话）</span>
+              <div class="hotline-detail">
+                <a class="hotline-detail-item" href="tel:18792273377">
+                  18792273377（微信同号）
+                </a>
+                <a class="hotline-detail-item" href="tel:8792203399">
+                  8792203399（微信同号）
+                </a>
+                <a class="hotline-detail-item" href="tel:0563-6808526" >
+                  0563-6808526
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card jiaotong">
+          <div class="card-title">
+            <span>交通路线</span>
+          </div>
+          <div class="card-content">
+            <div class="manor-address">
+              <span>地址：</span>
+              <span>点击下方文字复制</span>
+              <div class="manor-address-info" @click="handleCopy()">安徽省广德县新杭镇菁菁庄园</div>
+            </div>
+            <ul class="manor-line">
+              <li>
+                <span>宜兴 - 无锡方向</span>
+                <span>太极洞往广德方向至新航工业园邱村路口右转2公里再右转1公里即达</span>
+              </li>
+              <li>
+                <span>宜兴 - 无锡方向</span>
+                <span>太极洞往广德方向至新航工业园邱村路口右转2公里再右转1公里即达</span>
+              </li>
+              <li>
+                <span>宜兴 - 无锡方向</span>
+                <span>太极洞往广德方向至新航工业园邱村路口右转2公里再右转1公里即达</span>
+              </li>
+              <li>
+                <span>宜兴 - 无锡方向</span>
+                <span>太极洞往广德方向至新航工业园邱村路口右转2公里再右转1公里即达</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card yule">
+          <div class="card-title">
+            <span>娱乐及服务</span>
+          </div>
+          <div class="card-content">
+            <div class="card-content-item">
+              <span>果园飘香</span>
+              <div class="card-content-item-detail">
+                <div class="swiper-container entertainment">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item, index) in entertainments">
+                      <img :src="item">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-content-item">
+              <span>服务</span>
+              <div class="card-content-item-detail">
+                <div class="swiper-container service">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item, index) in services">
+                      <img :src="item">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card zhuyi">
+          <div class="card-title">
+            <span>注意事项</span>
+          </div>
+          <div class="card-content">
+            <span class="attention">
+              尊敬的游客，为了您的旅途愉快，请遵守和知悉：
+            </span>
+            <ul class="attention-detail">
+              <li>
+                采摘猕猴桃，火龙果，杨梅几其他果物蔬菜请与客服联系，由客服带领，采摘完成后统一在店面支付。
+              </li>
+              <li>
+              请注意景区内的安全提示，保管好自身财物和安全。
+              </li>
+              <li>
+               请保护好景区资源，遵守各景点游览规则，严禁攀折花木，捕捉野生动物，破坏景点，文物和相关旅游设施。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
